@@ -6,3 +6,12 @@ function getFirstSelector(selector) {
 function nestedTarget() {
   return document.querySelector('#nested .target')
 }
+
+function deepestChild() {
+  var grand-node = document.querySelector('#grand-node');
+  var deepestNode = grand-node.children[0];
+  for (var i = 0; !deepestNode.children[i]; i) {
+    deepestNode = deepestNode.children[0]
+  }
+  return deepestNode;
+}
